@@ -34,7 +34,7 @@ The pom.xml configuration is as follows,
 	<pluginRepository>
 	    <id>testgen-repository</id>
 	    <name>Testgen Repository</name>
-	    <url>https://raw2.github.com/sumeetchhetri/test-html-generator-plugin/master/maven/</url>
+	    <url>https://raw.githubusercontent.com/saurabh-bhatnagar/test-html-generator-plugin/master/maven/</url>
 	</pluginRepository>
  </pluginRepositories>
  <plugin>
@@ -45,99 +45,7 @@ The pom.xml configuration is as follows,
 		<!-- the comma separated list of classes/packages to scan for generating Test HTML pages as well as documentation from javadocs-->
   		<docTestPaths>
   			<docTestPath>com.my.restful.services.v1.</docTestPath>
-  		</docTestPaths>
-		
-		<!-- the comma separated list of classes/packages to scan for generating documentation from javadocs-->
-  		<docPaths>
-  			<docPath>com.my.restful.dto.MyDTO</docPath>
-  			<docPath>com.my.restful.mydtos.</docPath>
-  		</docPaths>
-		
-		<!-- the comma separated list of classes/packages to scan for generating Test HTML pages -->
-  		<testPaths>
-  			<testPath>com.my.restful.services.v2.</testPath>
-  		</testPaths>
-  		
-		<!-- Add extra links to the testgen pages on the right hand side links section-->
-  		<links>
-  			<link>link1.html</link>
-  			<link>link2.html</link>
-  		</links>
-		
-		<!-- The request content-type for generating mock json/xml objects which will be set in the http content body  -->
-  		<requestContentType>json</requestContentType>
-		
-		<!-- Generate the latest boststap 3 based HTML pages/or the old styled HTML -->
-  		<useBootstrapUI>true</useBootstrapUI>
-		
-		<!-- The URL prefix to be used while genarting URL's for test pages -->
-		<urlPrefix>url/prefix</urlPrefix>
-		
-		<!-- The URL suffix(will be attached in the query section of the URL) to be used while genarting URL's for test pages -->
-		<urlSuffix>urlsuffix</urlSuffix>
-		
-		<!-- The resource path be looked at for any additional html/css/html links -->
-  		<resourcepath>src/main/resources</resourcepath>
-		
-		<!-- The location where the HTML will be generated -->
-  		<uripath>testgen</uripath>
-		
-		<!-- The copywright to be added to your HTML pages -->
-  		<copywright>Testgen 2012</copywright>
-		
-		<!-- The authentication URL if any -->
-  		<loginpath>login</loginpath>
-		
-		<!-- The authentication HTTP method -->
-  		<loginmeth>POST</loginmeth>
-		
-		<!-- The authentication token parameter name and a way to extract it from the response
-		     Here it simply mentions that on successful login the token parameter will be returned
-		     in the JSON body {"token": "jkfjfjkgfk123123kjgkj1"}-->
-  		<authextract>token,json</authextract>
-  		<!-- It will be an xpath expression in case response content type is XML -->
-  		<!--
-			<authextract>//node//token,xml</authextract>
-  		-->
-  		<!-- 
-  			<authextract>token,plain</authextract>
-  		-->
-  		<!-- 
-  			<authextract>token,header</authextract>
-  		-->
-		
-		<!-- After authentication, how will the token be used to authenticate further requests
-		     not required for cookie based authe mechanism -->
-  		<apiauth>token,queryparam</apiauth>
-  		<!-- 
-  			<apiauth>token,postparam</apiauth>
-  		-->
-  		<!-- 
-  			<apiauth>token,header</apiauth>
-  		-->
-		
-		<!-- Where to send the username parameter-->
-  		<loginuser>username,header</loginuser>
-		
-		<!-- Where to send the password parameter-->
-  		<loginpass>password,header</loginpass>					
-  		
-		<!-- 
-  			<loginuser>username,postparam</loginuser>
-  			<loginpass>password,postparam</loginpass>
-  		-->
-  		<!-- 
-  			<loginuser>username,queryparam</loginuser>
-  			<loginpass>password,queryparam</loginpass>
-  		-->
-  		<!-- 
-  			<loginuser>username,json</loginuser>
-  			<loginpass>password,json</loginpass>
-  		-->
-  		<!-- 
-  			<loginuser>username,authbasic</loginuser>
-  			<loginpass>password,authbasic</loginpass>
-  		-->
+  		</docTestPaths>	
   	</configuration>
   	<executions>
   		<execution>
